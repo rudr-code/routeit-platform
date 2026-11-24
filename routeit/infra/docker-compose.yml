@@ -1,0 +1,67 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgis/postgis:15-3.4
+    container_name: routeit-postgres
+    environment:
+      POSTGRES_USER: routeit
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-routeit_dev_password}
+      POSTGRES_DB: routeit
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../backend/migrations/001_initial_schema.sql:/docker-entrypoint-initdb.d/001_initial_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U routeit -d routeit"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.backend
+    container_name: routeit-api
+    environment:
+      ROUTEIT_ENV: production
+      ROUTEIT_SQLITE_PATH: /app/data/routeit.db
+      ROUTEIT_POSTGRES_DSN: postgresql://routeit:${POSTGRES_PASSWORD:-routeit_dev_password}@postgres:5432/routeit
+    ports:
+      - "8000:8000"
+    volumes:
+      - routeit_data:/app/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  worker:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.backend
+    container_name: routeit-worker
+    command: ["python3", "-m", "app.jobs.worker_cli"]
+    environment:
+      ROUTEIT_ENV: production
+      ROUTEIT_SQLITE_PATH: /app/data/routeit.db
+      ROUTEIT_POSTGRES_DSN: postgresql://routeit:${POSTGRES_PASSWORD:-routeit_dev_password}@postgres:5432/routeit
+    volumes:
+      - routeit_data:/app/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: ../infra/Dockerfile.frontend
+    container_name: routeit-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - api
+
+volumes:
+  pgdata:
+  routeit_data:

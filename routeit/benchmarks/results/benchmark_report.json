@@ -1,0 +1,401 @@
+{
+  "generated_at_utc": "2026-11-17T03:27:13Z",
+  "engine_version": "Q-HGALS-5.0-REV-2026-11-16",
+  "methodology_note": "All algorithms evaluated through the identical CanonicalEvaluator under matched canonical evaluation budgets (120 evaluations per run) across independent seeds (42, 101). No global optimality or unconditional algorithmic superiority is claimed.",
+  "benchmarks": [
+    {
+      "instance_name": "Vadodara_TD_CVRPTW_8",
+      "evaluation_budget": 120,
+      "seeds": [
+        42,
+        101
+      ],
+      "reference_best_observed_paise": 148236,
+      "solvers": [
+        {
+          "solver": "CONSTRUCTIVE",
+          "feasibility_rate_pct": 100.0,
+          "best_cost_paise": 154785,
+          "mean_cost_paise": 154785,
+          "std_cost_paise": 0.0,
+          "mean_elapsed_ms": 54.9,
+          "runs": [
+            {
+              "seed": 42,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 154785,
+              "idle_seconds": 1600,
+              "distance_m": 41600,
+              "routes_used": 3,
+              "evaluations": 16,
+              "elapsed_ms": 94.05
+            },
+            {
+              "seed": 101,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 154785,
+              "idle_seconds": 1600,
+              "distance_m": 41600,
+              "routes_used": 3,
+              "evaluations": 17,
+              "elapsed_ms": 15.75
+            }
+          ],
+          "gap_vs_best_observed_pct": 4.42
+        },
+        {
+          "solver": "LOCAL_SEARCH",
+          "feasibility_rate_pct": 100.0,
+          "best_cost_paise": 148236,
+          "mean_cost_paise": 148236,
+          "std_cost_paise": 0.0,
+          "mean_elapsed_ms": 37.11,
+          "runs": [
+            {
+              "seed": 42,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 148236,
+              "idle_seconds": 1299,
+              "distance_m": 36750,
+              "routes_used": 3,
+              "evaluations": 120,
+              "elapsed_ms": 36.5
+            },
+            {
+              "seed": 101,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 148236,
+              "idle_seconds": 1299,
+              "distance_m": 36750,
+              "routes_used": 3,
+              "evaluations": 120,
+              "elapsed_ms": 37.72
+            }
+          ],
+          "gap_vs_best_observed_pct": 0.0
+        },
+        {
+          "solver": "ALNS",
+          "feasibility_rate_pct": 100.0,
+          "best_cost_paise": 153736,
+          "mean_cost_paise": 153736,
+          "std_cost_paise": 0.0,
+          "mean_elapsed_ms": 42.32,
+          "runs": [
+            {
+              "seed": 42,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 153736,
+              "idle_seconds": 1633,
+              "distance_m": 40650,
+              "routes_used": 3,
+              "evaluations": 120,
+              "elapsed_ms": 43.1
+            },
+            {
+              "seed": 101,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 153736,
+              "idle_seconds": 1633,
+              "distance_m": 40650,
+              "routes_used": 3,
+              "evaluations": 120,
+              "elapsed_ms": 41.54
+            }
+          ],
+          "gap_vs_best_observed_pct": 3.71
+        },
+        {
+          "solver": "GA",
+          "feasibility_rate_pct": 100.0,
+          "best_cost_paise": 150728,
+          "mean_cost_paise": 152055.5,
+          "std_cost_paise": 1327.5,
+          "mean_elapsed_ms": 63.11,
+          "runs": [
+            {
+              "seed": 42,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 153383,
+              "idle_seconds": 1505,
+              "distance_m": 40650,
+              "routes_used": 3,
+              "evaluations": 120,
+              "elapsed_ms": 66.48
+            },
+            {
+              "seed": 101,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 150728,
+              "idle_seconds": 2370,
+              "distance_m": 36300,
+              "routes_used": 3,
+              "evaluations": 121,
+              "elapsed_ms": 59.73
+            }
+          ],
+          "gap_vs_best_observed_pct": 1.68
+        },
+        {
+          "solver": "QPSO",
+          "feasibility_rate_pct": 100.0,
+          "best_cost_paise": 150728,
+          "mean_cost_paise": 152071,
+          "std_cost_paise": 1343.0,
+          "mean_elapsed_ms": 47.97,
+          "runs": [
+            {
+              "seed": 42,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 150728,
+              "idle_seconds": 2370,
+              "distance_m": 36300,
+              "routes_used": 3,
+              "evaluations": 120,
+              "elapsed_ms": 47.75
+            },
+            {
+              "seed": 101,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 153414,
+              "idle_seconds": 1888,
+              "distance_m": 39650,
+              "routes_used": 3,
+              "evaluations": 122,
+              "elapsed_ms": 48.18
+            }
+          ],
+          "gap_vs_best_observed_pct": 1.68
+        },
+        {
+          "solver": "ORTOOLS_ADAPTER",
+          "feasibility_rate_pct": 100.0,
+          "best_cost_paise": 153084,
+          "mean_cost_paise": 153084,
+          "std_cost_paise": 0.0,
+          "mean_elapsed_ms": 1548.78,
+          "runs": [
+            {
+              "seed": 42,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 153084,
+              "idle_seconds": 3860,
+              "distance_m": 34800,
+              "routes_used": 3,
+              "evaluations": 17,
+              "elapsed_ms": 1578.93
+            },
+            {
+              "seed": 101,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 153084,
+              "idle_seconds": 3860,
+              "distance_m": 34800,
+              "routes_used": 3,
+              "evaluations": 18,
+              "elapsed_ms": 1518.62
+            }
+          ],
+          "gap_vs_best_observed_pct": 3.27
+        }
+      ]
+    },
+    {
+      "instance_name": "Solomon_C101_12",
+      "evaluation_budget": 120,
+      "seeds": [
+        42,
+        101
+      ],
+      "reference_best_observed_paise": 328431,
+      "solvers": [
+        {
+          "solver": "CONSTRUCTIVE",
+          "feasibility_rate_pct": 100.0,
+          "best_cost_paise": 328431,
+          "mean_cost_paise": 328431,
+          "std_cost_paise": 0.0,
+          "mean_elapsed_ms": 68.62,
+          "runs": [
+            {
+              "seed": 42,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 328431,
+              "idle_seconds": 594,
+              "distance_m": 128431,
+              "routes_used": 2,
+              "evaluations": 16,
+              "elapsed_ms": 70.97
+            },
+            {
+              "seed": 101,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 328431,
+              "idle_seconds": 594,
+              "distance_m": 128431,
+              "routes_used": 2,
+              "evaluations": 16,
+              "elapsed_ms": 66.28
+            }
+          ],
+          "gap_vs_best_observed_pct": 0.0
+        },
+        {
+          "solver": "LOCAL_SEARCH",
+          "feasibility_rate_pct": 100.0,
+          "best_cost_paise": 328431,
+          "mean_cost_paise": 328431,
+          "std_cost_paise": 0.0,
+          "mean_elapsed_ms": 88.58,
+          "runs": [
+            {
+              "seed": 42,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 328431,
+              "idle_seconds": 594,
+              "distance_m": 128431,
+              "routes_used": 2,
+              "evaluations": 120,
+              "elapsed_ms": 88.09
+            },
+            {
+              "seed": 101,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 328431,
+              "idle_seconds": 594,
+              "distance_m": 128431,
+              "routes_used": 2,
+              "evaluations": 120,
+              "elapsed_ms": 89.07
+            }
+          ],
+          "gap_vs_best_observed_pct": 0.0
+        },
+        {
+          "solver": "ALNS",
+          "feasibility_rate_pct": 100.0,
+          "best_cost_paise": 328431,
+          "mean_cost_paise": 328431,
+          "std_cost_paise": 0.0,
+          "mean_elapsed_ms": 123.54,
+          "runs": [
+            {
+              "seed": 42,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 328431,
+              "idle_seconds": 594,
+              "distance_m": 128431,
+              "routes_used": 2,
+              "evaluations": 123,
+              "elapsed_ms": 124.1
+            },
+            {
+              "seed": 101,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 328431,
+              "idle_seconds": 594,
+              "distance_m": 128431,
+              "routes_used": 2,
+              "evaluations": 120,
+              "elapsed_ms": 122.99
+            }
+          ],
+          "gap_vs_best_observed_pct": 0.0
+        },
+        {
+          "solver": "GA",
+          "feasibility_rate_pct": 100.0,
+          "best_cost_paise": 328431,
+          "mean_cost_paise": 328431,
+          "std_cost_paise": 0.0,
+          "mean_elapsed_ms": 257.15,
+          "runs": [
+            {
+              "seed": 42,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 328431,
+              "idle_seconds": 594,
+              "distance_m": 128431,
+              "routes_used": 2,
+              "evaluations": 107,
+              "elapsed_ms": 254.46
+            },
+            {
+              "seed": 101,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 328431,
+              "idle_seconds": 594,
+              "distance_m": 128431,
+              "routes_used": 2,
+              "evaluations": 109,
+              "elapsed_ms": 259.84
+            }
+          ],
+          "gap_vs_best_observed_pct": 0.0
+        },
+        {
+          "solver": "QPSO",
+          "feasibility_rate_pct": 100.0,
+          "best_cost_paise": 328431,
+          "mean_cost_paise": 328431,
+          "std_cost_paise": 0.0,
+          "mean_elapsed_ms": 224.0,
+          "runs": [
+            {
+              "seed": 42,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 328431,
+              "idle_seconds": 594,
+              "distance_m": 128431,
+              "routes_used": 2,
+              "evaluations": 123,
+              "elapsed_ms": 192.2
+            },
+            {
+              "seed": 101,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 328431,
+              "idle_seconds": 594,
+              "distance_m": 128431,
+              "routes_used": 2,
+              "evaluations": 120,
+              "elapsed_ms": 255.79
+            }
+          ],
+          "gap_vs_best_observed_pct": 0.0
+        },
+        {
+          "solver": "ORTOOLS_ADAPTER",
+          "feasibility_rate_pct": 100.0,
+          "best_cost_paise": 328431,
+          "mean_cost_paise": 328431,
+          "std_cost_paise": 0.0,
+          "mean_elapsed_ms": 1568.78,
+          "runs": [
+            {
+              "seed": 42,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 328431,
+              "idle_seconds": 594,
+              "distance_m": 128431,
+              "routes_used": 2,
+              "evaluations": 17,
+              "elapsed_ms": 1569.69
+            },
+            {
+              "seed": 101,
+              "status": "COMPLETE_FEASIBLE",
+              "c_dec_paise": 328431,
+              "idle_seconds": 594,
+              "distance_m": 128431,
+              "routes_used": 2,
+              "evaluations": 17,
+              "elapsed_ms": 1567.87
+            }
+          ],
+          "gap_vs_best_observed_pct": 0.0
+        }
+      ]
+    }
+  ]
+}

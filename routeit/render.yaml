@@ -1,0 +1,21 @@
+services:
+  # ==============================================================================
+  # Route.it Complete Platform — Unified Full-Stack Web Service on Render
+  # Multi-stage Docker build: React Vite Dispatcher SPA + FastAPI Optimization API
+  # Zero CORS configuration, single public URL, Render Free Tier friendly.
+  # ==============================================================================
+  - type: web
+    name: routeit-platform
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /v1/healthz
+    envVars:
+      - key: ROUTEIT_ENV
+        value: production
+      - key: ROUTEIT_SQLITE_PATH
+        value: /app/data/routeit.db
+      - key: ROUTEIT_API_HOST
+        value: 0.0.0.0
