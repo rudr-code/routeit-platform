@@ -1,6 +1,6 @@
 services:
   # ==============================================================================
-  # Route.it Complete Platform — Unified Full-Stack Web Service on Render
+  # Route.it Complete Platform - Unified Full-Stack Web Service on Render
   # Multi-stage Docker build: React Vite Dispatcher SPA + FastAPI Optimization API
   # Zero CORS configuration, single public URL, Render Free Tier friendly.
   # ==============================================================================
